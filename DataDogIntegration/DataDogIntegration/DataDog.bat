@@ -1,0 +1,13 @@
+@ECHO OFF
+@Echo INFO BEGIN PINGDOM %JOB_NAME% %TIME% 
+
+Set PROCESSFILENAME=PingDomIntegration\bin\Debug\output.md
+SET PATHEXE=\Debug\DataDogIntegration.exe
+SET DASHBOARDIDTOUPDATE=13333
+SET OPTIONS=--d %DASHBOARDIDTOUPDATE% --i %PROCESSFILENAME%
+
+Echo "Importing File to Datadog dashboard: "%PATHEXE%"  %OPTIONS%"
+"%PATHEXE%"  %OPTIONS%
+
+
+
